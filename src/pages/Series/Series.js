@@ -1,11 +1,10 @@
-import React, { useEffect, useState } from 'react'
-import axios from 'axios';
 import './Series.css';
+import axios from 'axios';
+import React, { useEffect, useState } from 'react'
 import SingleContent from '../../components/SingleContent/SingleContent';
 import CustomPagination from '../../components/CustomPagination/CustomPagination';
 
 const Series = () => {
-
     const [page, setPage] = useState(1);
     const [content, setcontent] = useState([]);
     const [numberOfPages, setNumberOfPages] = useState(10);
@@ -23,8 +22,8 @@ const Series = () => {
 
     return (
         <div>
-            <span className="pageTitle">TV Series</span>
-            <div className="series">
+            <span className='pageTitle'>TV Series</span>
+            <div className='series'>
                 {
                     content && content.map((eachItem) => (
                         <SingleContent
@@ -33,7 +32,7 @@ const Series = () => {
                             poster={eachItem.poster_path}
                             title={eachItem.title || eachItem.name}
                             date={eachItem.first_air_date || eachItem.release_date}
-                            media_type={eachItem.media_type}
+                            media_type='tv'
                             vote_average={eachItem.vote_average}
                         />
                     ))
