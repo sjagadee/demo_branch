@@ -1,7 +1,7 @@
-import './SingleContent.css'
-import { img_300, posterNotFound } from '../../config/config'
+import './SingleContent.css';
 import Badge from '@mui/material/Badge';
 import DetailedModal from '../DetailedModal/DetailedModal';
+import { img_300, posterNotFound } from '../../config/config';
 
 const SingleContent = ({
     id,
